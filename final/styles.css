@@ -47,14 +47,15 @@ body {
 }
 
 .hero-content h2 {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
+    letter-spacing: 3px;
     font-weight: 300;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
     font-weight: 300;
 }
@@ -666,7 +667,7 @@ footer a:hover {
     .gallery-item img {
         height: 250px; /* Reducir altura de las imágenes de galería */
     }
-
+    
     /* Gifts Section */
     .gift-icon {
         font-size: 4rem; /* Icono de regalo más pequeño */
