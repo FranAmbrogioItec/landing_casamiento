@@ -21,4 +21,4 @@ jobs:
         script: |
           cd ~/lemp-sites/francisco_ambrogio/
           git pull origin main
-          echo "✅ Deployment completed successfully!!"
+          echo "✅ Deployment completed successfully!"
