@@ -1,8 +1,8 @@
-name: Deploy to Staging
+name: Deploy to Production
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -12,15 +12,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Deploy to Staging Server
+    - name: Deploy to Production Server
       uses: appleboy/ssh-action@v0.1.10
       with:
         host: ${{ secrets.SERVER_IP }}
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          cd ~/lemp-sites/nombre_apellido/staging
+          cd ~/lemp-sites/nombre_apellido/production
           git fetch origin
-          git reset --hard origin/develop
-          git pull origin develop
-          echo "Staging deployment completed successfully!"
+          git reset --hard origin/main
+          git pull origin main
+          echo "Production deployment completed successfully!"
